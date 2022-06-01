@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Test task</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body>
+    <h1>Test task Tsulina JS</h1>
+
+    <div class="d-grid gap-2">
+        <button id="first" class="btn btn-warning" type="button">First task</button>
+        <button id="second" class="btn btn-success" type="button">Second task</button>
+        <button id="third" class="btn btn-primary" type="button">Third task</button>
+        <button id="fourth" class="btn btn-info" type="button">Fourth task</button>
+      </div>
+    <script>
+    // 1.Составить алгоритм: если введенное число больше 7, то вывести “Привет”
+first.onclick = () => alert(prompt("Введите любое число", "100500") > 7 ? "Привет" : "");
+
+
+// 2. Составить алгоритм: если введенное имя совпадает с Вячеслав, то вывести “Привет, Вячеслав”, если нет, то вывести "Нет такого имени"
+second.onclick = () => alert(prompt("Введите любое имя","Вячеслав")==="Вячеслав" ? "Привет, Вячеслав": "Нет такого имени");
+
+
+// 3. Составить алгоритм: на входе есть числовой массив, необходимо вывести элементы массива кратные 3
+third.onclick = () => { 
+    arr = new Array();
+let num = parseInt(prompt("Введите количество элементов в массиве"));
+for (let i = 0; i < num; i++) {
+    arr.push(parseInt(prompt("Введите элемент массива")));    
+}
+const res = arr.filter(elem => elem % 3 === 0 && elem !== 0);
+alert(res);
+}
+
+/* 4. Дана скобочная последовательность: [((())()(())]]
+- Можно ли считать эту последовательность правильной?
+- Если ответ на предыдущий вопрос “нет” - то что необходимо в ней изменить, чтоб она стала правильной?
+*/
+
+fourth.onclick = () => alert("Нет, данную скобочную последовательность нельзя назвать правильной. \
+Так как в ней количество открывающихся и закрывающихся скобок одного типа отличается. \
+Если второй знак в последовательности(открывающуюся круглую скобку) заменить за открывающуюся квадратную, \
+то получится правильная скобочная последовательность.");
+
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
